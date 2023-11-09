@@ -1,0 +1,6 @@
+com.example.contactlist
+com.example.contactlist.exception
+com.example.contactlist.listener
+com.example.contactlist.repository
+com.example.contactlist.repository.mapper
+com.example.contactlist.services

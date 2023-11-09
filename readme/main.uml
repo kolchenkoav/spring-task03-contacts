@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Spring/Task03/contact-list - jdbc/src/main</OriginalElement>
+  <nodes>
+    <node x="258.0" y="306.0">com.example.contactlist.ContactListApplication</node>
+    <node x="0.0" y="306.0">com.example.contactlist.listener.DatabaseContactCreator</node>
+    <node x="227.0" y="380.0">com.example.contactlist.ContactController</node>
+    <node x="160.0" y="0.0">com.example.contactlist.repository.ContactRepository</node>
+    <node x="0.0" y="232.0">com.example.contactlist.services.ContactServiceImpl</node>
+    <node x="0.0" y="454.0">com.example.contactlist.Contact</node>
+    <node x="0.0" y="79.0">com.example.contactlist.repository.DatabaseContactRepository</node>
+    <node x="15.0" y="153.0">com.example.contactlist.services.ContactService</node>
+    <node x="0.0" y="380.0">com.example.contactlist.repository.mapper.ContactRowMapper</node>
+    <node x="223.0" y="153.0">com.example.contactlist.exception.ContactNotFoundException</node>
+    <node x="255.0" y="79.0">com.example.contactlist.repository.InMemoryContactRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.contactlist.repository.DatabaseContactRepository" target="com.example.contactlist.repository.ContactRepository" relationship="REALIZATION">
+      <point x="0.0" y="-14.5" />
+      <point x="117.5" y="54.0" />
+      <point x="246.0" y="54.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.example.contactlist.services.ContactServiceImpl" target="com.example.contactlist.services.ContactService" relationship="REALIZATION">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.example.contactlist.repository.InMemoryContactRepository" target="com.example.contactlist.repository.ContactRepository" relationship="REALIZATION">
+      <point x="0.0" y="-14.5" />
+      <point x="374.5" y="54.0" />
+      <point x="246.0" y="54.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="247.0" y="241.5" />
+  <SelectedNodes>
+    <node>com.example.contactlist.ContactController</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

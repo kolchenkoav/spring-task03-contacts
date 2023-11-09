@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact list</title>
+</head>
+<body>
+
+<h3>Contact list</h3>
+<form th:method="post">
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row,rowStat : *{contacts}">
+            <td th:text="${rowStat.count}">1</td>
+            <td>
+                <input type="text" th:value="${contacts[__${rowStat.index}__].id}" disabled/>
+            </td>
+            <td>
+                <input type="text" th:value="${contacts[__${rowStat.index}__].firstName}" disabled/>
+            </td>
+
+            <td>
+                <input type="text" th:value="${contacts[__${rowStat.index}__].lastName}" disabled/>
+            </td>
+            <td>
+                <input type="text" th:value="${contacts[__${rowStat.index}__].email}" disabled/>
+            </td>
+            <td>
+                <input type="text" th:value="${contacts[__${rowStat.index}__].phone}" disabled/>
+            </td>
+
+            <td><a th:href="@{/contact/update/{id}(id=*{contacts[__${rowStat.index}__].id})}">Edit</a></td>
+            <td><a th:href="@{/contact/delete/{id}(id=*{contacts[__${rowStat.index}__].id})}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <p>
+        <a type="submit" th:type="submit" th:href="@{/contact/create}">Add new contact</a>
+    </p>
+</form>
+
+<div th:if="${isCreateContact} != false">
+    <div th:insert="~{fragments/formContact :: FormContact}"></div>
+</div>
+<div th:if="${isUpdateContact} != false">
+    <div th:insert="~{fragments/formContact :: FormContact}"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.example.contactlist"},{"l":"com.example.contactlist.exception"},{"l":"com.example.contactlist.listener"},{"l":"com.example.contactlist.repository"},{"l":"com.example.contactlist.repository.mapper"},{"l":"com.example.contactlist.services"}];updateSearchResults();

@@ -1,0 +1,18 @@
+<FormContact>
+    <h1></h1>
+    <div th:if="${isCreateContact} != false">
+        <form th:object="${contact}" th:action="@{/contact/add}" th:method="post">
+            <table>
+                <div th:insert="~{fragments/fieldsContact :: header}"></div>
+            </table>
+        </form>
+    </div>
+    <div th:if="${isUpdateContact} != false">
+        <form th:object="${contact}" th:action="@{/contact/update}" th:method="post">
+            <table>
+                <div th:insert="~{fragments/fieldsContact :: header}"></div>
+            </table>
+        </form>
+    </div>
+</FormContact>
+

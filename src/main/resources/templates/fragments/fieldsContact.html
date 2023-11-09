@@ -1,0 +1,15 @@
+<header>
+    <form method="post" th:method="post">
+        <p></p>
+        <p><span th:text="${name}"></span></p>
+
+        <input type="text" placeholder="firstName" th:field="*{firstName}">
+        <input type="text" placeholder="lastName" th:field="*{lastName}">
+        <input type="email" placeholder="email" th:field="*{email}">
+        <input type="tel" th:type="tel" placeholder="phone" th:field="*{phone}"
+               pattern="^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$">
+        <button type="submit"><span th:text="${name}"></span></button>
+        <button type="reset" th:type="reset">Reset</button>
+
+    </form>
+</header>
